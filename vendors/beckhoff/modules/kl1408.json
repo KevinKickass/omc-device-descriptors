@@ -1,0 +1,72 @@
+{
+  "module": {
+    "id": "beckhoff-kl1408",
+    "vendor": "Beckhoff",
+    "model": "KL1408",
+    "type": "input",
+    "version": "1.0",
+    "description": "8-channel digital input, 24V DC, 3ms"
+  },
+  "process_image": {
+    "input_bytes": 1,
+    "output_bytes": 0
+  },
+  "channels": [
+    {
+      "id": 0,
+      "name": "input_0",
+      "type": "digital_input",
+      "bit_offset": 0,
+      "description": "Digital input channel 0"
+    },
+    {
+      "id": 1,
+      "name": "input_1",
+      "type": "digital_input",
+      "bit_offset": 1,
+      "description": "Digital input channel 1"
+    },
+    {
+      "id": 2,
+      "name": "input_2",
+      "type": "digital_input",
+      "bit_offset": 2,
+      "description": "Digital input channel 2"
+    },
+    {
+      "id": 3,
+      "name": "input_3",
+      "type": "digital_input",
+      "bit_offset": 3,
+      "description": "Digital input channel 3"
+    },
+    {
+      "id": 4,
+      "name": "input_4",
+      "type": "digital_input",
+      "bit_offset": 4,
+      "description": "Digital input channel 4"
+    },
+    {
+      "id": 5,
+      "name": "input_5",
+      "type": "digital_input",
+      "bit_offset": 5,
+      "description": "Digital input channel 5"
+    },
+    {
+      "id": 6,
+      "name": "input_6",
+      "type": "digital_input",
+      "bit_offset": 6,
+      "description": "Digital input channel 6"
+    },
+    {
+      "id": 7,
+      "name": "input_7",
+      "type": "digital_input",
+      "bit_offset": 7,
+      "description": "Digital input channel 7"
+    }
+  ]
+}

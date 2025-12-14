@@ -1,9 +1,0 @@
-vendor: Generic
-description: Generic Modbus devices and simulators
-
-devices:
-  - id: generic-modbus-simulator
-    file: modbus-simulator.json
-    name: Modbus TCP Simulator
-    description: Generic simulator for testing
-    tested: true

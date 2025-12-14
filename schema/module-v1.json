@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openmachinecore.org/schemas/module-v1.json",
+  "title": "OpenMachineCore Module Definition",
+  "type": "object",
+  "required": ["module"],
+  "properties": {
+    "module": {
+      "type": "object",
+      "required": ["id", "vendor", "model", "type", "version"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "vendor": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["coupler", "input", "output", "analog_input", "analog_output", "mixed"]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "connection": {
+      "type": "object",
+      "description": "Only for coupler modules"
+    },
+    "process_image": {
+      "type": "object",
+      "required": ["input_bytes", "output_bytes"],
+      "properties": {
+        "input_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type"],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "bit_offset": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "registers": {
+      "type": "array",
+      "description": "Additional registers (e.g., diagnostics)"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "module": {
+    "id": "beckhoff-kl2408",
+    "vendor": "Beckhoff",
+    "model": "KL2408",
+    "type": "output",
+    "version": "1.0",
+    "description": "8-channel digital output, 24V DC, 0.5A"
+  },
+  "process_image": {
+    "input_bytes": 0,
+    "output_bytes": 1
+  },
+  "channels": [
+    {
+      "id": 0,
+      "name": "output_0",
+      "type": "digital_output",
+      "bit_offset": 0,
+      "description": "Digital output channel 0"
+    },
+    {
+      "id": 1,
+      "name": "output_1",
+      "type": "digital_output",
+      "bit_offset": 1,
+      "description": "Digital output channel 1"
+    },
+    {
+      "id": 2,
+      "name": "output_2",
+      "type": "digital_output",
+      "bit_offset": 2,
+      "description": "Digital output channel 2"
+    },
+    {
+      "id": 3,
+      "name": "output_3",
+      "type": "digital_output",
+      "bit_offset": 3,
+      "description": "Digital output channel 3"
+    },
+    {
+      "id": 4,
+      "name": "output_4",
+      "type": "digital_output",
+      "bit_offset": 4,
+      "description": "Digital output channel 4"
+    },
+    {
+      "id": 5,
+      "name": "output_5",
+      "type": "digital_output",
+      "bit_offset": 5,
+      "description": "Digital output channel 5"
+    },
+    {
+      "id": 6,
+      "name": "output_6",
+      "type": "digital_output",
+      "bit_offset": 6,
+      "description": "Digital output channel 6"
+    },
+    {
+      "id": 7,
+      "name": "output_7",
+      "type": "digital_output",
+      "bit_offset": 7,
+      "description": "Digital output channel 7"
+    }
+  ]
+}

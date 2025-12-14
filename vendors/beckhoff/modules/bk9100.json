@@ -1,0 +1,34 @@
+{
+  "module": {
+    "id": "beckhoff-bk9100",
+    "vendor": "Beckhoff",
+    "model": "BK9100",
+    "type": "coupler",
+    "version": "1.0",
+    "description": "Modbus TCP Bus Coupler"
+  },
+  "connection": {
+    "protocol": "modbus_tcp",
+    "port": 502,
+    "unit_id": 1,
+    "timeout_ms": 1000
+  },
+  "registers": [
+    {
+      "name": "coupler_status",
+      "address": 4096,
+      "type": "input_register",
+      "data_type": "uint16",
+      "access": "read_only",
+      "description": "Bus coupler status"
+    },
+    {
+      "name": "terminal_count",
+      "address": 4097,
+      "type": "input_register",
+      "data_type": "uint16",
+      "access": "read_only",
+      "description": "Number of terminals"
+    }
+  ]
+}
