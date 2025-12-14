@@ -1,0 +1,70 @@
+{
+  "device_profile": {
+    "id": "generic-modbus-simulator",
+    "vendor": "Generic",
+    "model": "Modbus TCP Simulator",
+    "version": "1.0",
+    "description": "Generic Modbus TCP device for testing"
+  },
+  "connection": {
+    "protocol": "modbus_tcp",
+    "port": 502,
+    "unit_id": 1,
+    "poll_interval_ms": 100,
+    "timeout_ms": 1000
+  },
+  "registers": [
+    {
+      "name": "test_register_1",
+      "address": 0,
+      "type": "holding_register",
+      "data_type": "uint16",
+      "scale_factor": 1.0,
+      "unit": "",
+      "access": "read_write",
+      "description": "Test register 1"
+    },
+    {
+      "name": "test_register_2",
+      "address": 1,
+      "type": "holding_register",
+      "data_type": "uint16",
+      "scale_factor": 1.0,
+      "unit": "",
+      "access": "read_write",
+      "description": "Test register 2"
+    },
+    {
+      "name": "temperature",
+      "address": 10,
+      "type": "input_register",
+      "data_type": "int16",
+      "scale_factor": 0.1,
+      "unit": "°C",
+      "access": "read_only",
+      "description": "Temperature sensor"
+    },
+    {
+      "name": "motor_speed",
+      "address": 100,
+      "type": "holding_register",
+      "data_type": "uint16",
+      "scale_factor": 1.0,
+      "unit": "rpm",
+      "access": "read_write",
+      "description": "Motor speed setpoint"
+    }
+  ],
+  "register_groups": [
+    {
+      "name": "fast_poll",
+      "poll_interval_ms": 50,
+      "registers": ["test_register_1", "test_register_2"]
+    },
+    {
+      "name": "slow_poll",
+      "poll_interval_ms": 500,
+      "registers": ["temperature", "motor_speed"]
+    }
+  ]
+}
